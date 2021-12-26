@@ -10,12 +10,12 @@ export interface CardProps {
 const Card = ({ children }: CardProps) => {
   const [isShowHeader2, setIsShowHeader2] = useState(true);
   return (
-    <div className="w-[400px] h-[300px] border-solid border-[1px] flex flex-col">
+    <div className="w-[400px] max-w-[400px] h-[300px] max-h-[300px] border-solid border-[1px] flex flex-col">
       <CardHeader1 />
       {isShowHeader2 && (
         <CardHeader2 onHide={() => setIsShowHeader2((isShow) => !isShow)} />
       )}
-      <div className="flex-1">{children}</div>
+      <div className="flex-auto w-full overflow-y-scroll">{children}</div>
       <CardFooter />
     </div>
   );
