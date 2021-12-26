@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { reducer as termReducer } from '../services/term/termAPI';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    term: termReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;

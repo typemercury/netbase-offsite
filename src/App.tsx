@@ -1,10 +1,12 @@
-import React from 'react';
-import Counter from './features/counter/Counter';
+import React  from 'react';
+import { useGetTermsQuery } from './services/term/termAPI'
+
 
 function App(): JSX.Element {
+  // fetch and store data
+  const { data, error, isLoading } = useGetTermsQuery()
   return (
     <div className="App">
-      <Counter />
     </div>
   );
 }
