@@ -1,4 +1,4 @@
-export interface Term {
+export interface TermData {
   name: string;
   count: number;
 }
