@@ -15,7 +15,7 @@ const Card = ({ children }: CardProps) => {
       {isShowHeader2 && (
         <CardHeader2 onHide={() => setIsShowHeader2((isShow) => !isShow)} />
       )}
-      <div className="flex-auto w-full overflow-y-scroll">{children}</div>
+      <div className="flex-auto w-full overflow-y-hidden">{children}</div>
       <CardFooter />
     </div>
   );

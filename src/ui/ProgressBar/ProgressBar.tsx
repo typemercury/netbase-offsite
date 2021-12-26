@@ -19,7 +19,7 @@ const ProgressBar = ({ progress, width, height }: ProgressBarProps) => {
         {progress}%
       </span>
       <div
-        className="bg-yellow-400 h-full"
+        className="bg-yellow-300 h-full"
         style={{ width: `calc(${barWidth})` }}
       ></div>
     </div>

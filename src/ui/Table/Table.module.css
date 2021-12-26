@@ -1,0 +1,7 @@
+/* add space between thead and tbody */
+.head-body-gap > tbody::before {
+  content: '@';
+  display: block;
+  line-height: 0.5rem;
+  text-indent: -99999px;
+}
