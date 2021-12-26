@@ -6,7 +6,7 @@ import TermHeader2 from './TermHeader2'
 
 const TermCard = () => {
     return (
-        <div>
+        <div className='w-[400px] h-[300px] border-solid border-[1px]'>
             <TermHeader1/>
             <TermHeader2/>
             <div>

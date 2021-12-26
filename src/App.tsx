@@ -7,7 +7,7 @@ function App(): JSX.Element {
   // fetch and store data
   const { data, error, isLoading } = useGetTermsQuery()
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="w-screen h-screen flex flex-col items-center justify-center">
       <TermCard></TermCard>
     </div>
   );
