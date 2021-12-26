@@ -1,14 +1,14 @@
 import React  from 'react';
 import { useGetTermsQuery } from './services/term/termAPI'
-import TermCard from './features/termCard/TermCard';
+import Term from './features/Term'
 
 
 function App(): JSX.Element {
   // fetch and store data
   const { data, error, isLoading } = useGetTermsQuery()
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center">
-      <TermCard></TermCard>
+    <div className="w-screen h-screen ">
+      <Term/> 
     </div>
   );
 }

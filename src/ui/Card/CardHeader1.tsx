@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TermHeader1 = () => {
+const CardHeader1 = () => {
     return (
         <header className='flex bg-sky-500 font-bold text-lg py-1 px-2 '>
             <span className='uppercase text-white mx-auto'>
@@ -11,4 +11,4 @@ const TermHeader1 = () => {
     )
 }
 
-export default TermHeader1
+export default CardHeader1

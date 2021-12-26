@@ -1,10 +1,10 @@
 import React from 'react'
 
-export interface TermHeader2Props {
+export interface CardHeader2Props {
     onHide?: () => void 
 }
 
-const TermHeader2 = ({onHide}: TermHeader2Props) => {
+const CardHeader2 = ({onHide}: CardHeader2Props) => {
     return (
         <header className='bg-gray-500 grid grid-cols-8 text-white text-base font-bold uppercase'>
             <div className='col-span-7 flex gap-2 items-center justify-center'>
@@ -26,4 +26,4 @@ const TermHeader2 = ({onHide}: TermHeader2Props) => {
     )
 }
 
-export default TermHeader2
+export default CardHeader2
