@@ -7,13 +7,13 @@ import TermHeader2 from './TermHeader2'
 const TermCard = () => {
     const [isShowHeader2, setIsShowHeader2] = useState(true);
     return (
-        <div className='w-[400px] h-[300px] border-solid border-[1px]'>
+        <div className='w-[400px] h-[300px] border-solid border-[1px] flex flex-col'>
             <TermHeader1/>
             {
                 isShowHeader2 && 
                 <TermHeader2 onHide={() => setIsShowHeader2(isShow => !isShow)}/>
             }
-            <div>
+            <div className='flex-1'>
                 <TermContent/>
             </div>
             <TermFooter/>
