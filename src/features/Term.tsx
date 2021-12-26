@@ -24,8 +24,10 @@ const Term = () => {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <Card>
-        <div>
-          <h1 className="uppercase">Top Terms</h1>
+        <div className="p-2">
+          <h1 className="uppercase text-gray-400 text-sm font-bold mb-1">
+            Top Terms
+          </h1>
           {!error && !isLoading && (
             <Table colDefs={colDefs} dataSource={data || []} />
           )}
