@@ -1,6 +1,7 @@
 import React from 'react';
 import { useGetTermsQuery } from '../services/term/termAPI';
 import Card from '../ui/Card/Card';
+import ProgressBar from '../ui/ProgressBar/ProgressBar';
 import Table, { ColDef } from '../ui/Table/Table';
 
 const colDefs: ColDef[] = [
@@ -11,6 +12,9 @@ const colDefs: ColDef[] = [
   {
     displayName: '% of total posts',
     field: 'count',
+    customRenderer: (colVal) => (
+      <ProgressBar progress={colVal} width="200px" height="25px" />
+    ),
   },
   {
     displayName: '# of posts',

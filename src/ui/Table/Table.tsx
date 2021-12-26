@@ -3,6 +3,7 @@ import React from 'react';
 export interface ColDef {
   displayName: string;
   field: string;
+  customRenderer?: (colVal: any) => JSX.Element;
 }
 
 export interface TableProps {
@@ -27,7 +28,11 @@ const Table = ({ colDefs, dataSource }: TableProps) => {
             <tr key={data.name}>
               {colDefs &&
                 colDefs.map((def) => (
-                  <td key={def.displayName}>{data[def.field]}</td>
+                  <td key={def.displayName}>
+                    {def.customRenderer
+                      ? def.customRenderer(data[def.field])
+                      : data[def.field]}
+                  </td>
                 ))}
             </tr>
           ))}
